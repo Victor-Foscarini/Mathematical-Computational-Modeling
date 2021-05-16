@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import random, operator
 import networkx as nx
 
+#Class with operations to be used
 #Create the population: stores position of a city (gene)
 class City:
 
@@ -209,7 +210,7 @@ class GeneticAlgo :
     #mutationRate: rate of mutation (between 0 and 1)
     #generations: number of generations to have
 
-    def apply_geneticAlgorithm(self,popSize,eliteSize,mutationRate,Ngenerations,showRoute=None,returnArray=False):
+    def apply_geneticAlgorithm(self,popSize,eliteSize,mutationRate,Ngenerations,showRoute=False,returnArray=False):
         self.initialPopulation(popSize)
 
         if not showRoute:
@@ -234,12 +235,14 @@ class GeneticAlgo :
 
         bestRouteIndex = self.rankRoutes()[0][0]
         self.bestRoute = self.population[bestRouteIndex]
+        self.finalresult = -self.rankRoutes()[0][1]
         if showRoute and not returnArray:
             self.plot_as_graph(self.bestRoute,title="Final trajectory: "+"generation "+str(Ngenerations))
             self.finalresult = -self.rankRoutes()[0][1]
-            print("Final distance: "+str(self.finalresult))
         if returnArray:
             return self.trajetory
+        else:
+            print("Final distance: "+str(self.finalresult))
 
 
     def plot_as_graph(self,route,title="Graph of cities",fontsize=30,Nbreed=None):
