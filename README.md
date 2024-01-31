@@ -1,1 +1,1 @@
-Projects based on [Costa's didactic texts](https://www.researchgate.net/project/Costas-Didactic-Texts-CDTs) I did for the discipline [Mathematical-Computational Modeling](https://uspdigital.usp.br/jupiterweb/obterDisciplina?nomdis=&sgldis=7600059).
+Projects based on [Costa's didactic texts](https://www.researchgate.net/project/Costas-Didactic-Texts-CDTs) I did for the course [7600059 - Mathematical-Computational Modeling](https://uspdigital.usp.br/jupiterweb/obterDisciplina?nomdis=&sgldis=7600059).
